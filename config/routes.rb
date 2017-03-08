@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
-  get 'restaurants/index'
+  get 'restaurants', to: "restaurants#index"
 
-  get 'restaurants/show'
+  get 'restaurants/:id', to: "restaurants#show"
 
-  get 'restaurants/new'
+  get 'restaurants/new', to: "restaurants#new"
 
-  get 'restaurants/create'
+  post 'restaurants', to: "restaurants#create"
 
-  get 'restaurants/edit'
+  get 'restaurants/:id/edit', to: "restaurants#edit"
 
-  get 'restaurants/update'
+  patch 'restaurants/:id', to: "restaurants#update"
 
-  get 'restaurants/destroy'
+  delete 'restaurants/:id', to: "restaurants#destroy"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
