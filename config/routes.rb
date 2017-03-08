@@ -13,9 +13,10 @@ Rails.application.routes.draw do
 
   delete '/restaurants/:id', to: "restaurants#destroy", as: :delete_restaurant
 
+  get '/restaurants/:restaurant_id/reviews/new', to: "review#new", as: :new_restaurant_review
+
+  post '/restaurants/:restaurant_id/reviews', to: "review#create"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
-# Rails.application.routes.draw do
-#   resources :restaurants
-# end
+
